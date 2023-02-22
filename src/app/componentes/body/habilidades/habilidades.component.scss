@@ -1,0 +1,33 @@
+div.habilidades-conteiner {
+  & h1.titulo {
+   margin-bottom: 1rem;
+  }
+
+  & ul.hab_card {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    & li.habilidad {
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      padding: .25rem;
+      border: 1px solid #0d6efd;
+      border-radius: 25px;
+
+      & img.logo_hab {
+        width: 2rem;
+        margin: .5rem 0 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  div.habilidades-conteiner {
+    & h1.titulo {
+      margin-left: .5rem;
+    }
+  }
+}
