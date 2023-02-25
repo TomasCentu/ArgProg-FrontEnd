@@ -1,0 +1,45 @@
+div.editable_datos {
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  height: calc(100vh - 160px);
+
+  & form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-right: 1px solid #DDD;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+
+    & h4.titulo {
+      color: #0d6efd;
+      text-decoration: underline;
+      margin-bottom: 2rem;
+    }
+  }
+
+  & ul.card_list {
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 600px) {
+  div.editable_datos {
+    flex-direction: column;
+    height: auto;
+
+    & form {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #DDD;
+      padding: 0 0 1.5rem 0;
+    }
+
+    & ul.card_list {
+      width: 100%;
+    }
+
+  }
+}

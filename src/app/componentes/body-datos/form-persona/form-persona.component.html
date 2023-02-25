@@ -1,0 +1,33 @@
+<div class="editable_datos col-12">
+  <form action="#" method="post" class="col-12">
+    <h4 class="titulo">Datos Personales</h4>
+
+    <div class="input_conteiner">
+      <input type="text" placeholder="nombre" id="nombre">
+      <label for="nombre">Nombre Completo</label>
+    </div>
+
+    <div class="input_conteiner">
+      <input type="text" placeholder="cargo" id="cargo">
+      <label for="cargo">Cargo / Puesto</label>
+    </div>
+
+    <label for="img-url" class="col-12">Foto de Perfil</label>
+    <input type="text" name="file" id="img-url" placeholder="URL de imagen">
+    <span>ó</span>
+    <input type="file" class="form-control" id="img">
+
+    <label for="banner-url" class="col-12">Foto de Banner</label>
+    <input type="text" name="file" id="banner-url" placeholder="URL de imagen">
+    <span>ó</span>
+    <input type="file" class="form-control" id="banner">
+
+    <label for="sobre-mi" class="col-12">Descripción "Sobre Mí"</label>
+
+    <p class="alerta">Maximo 200 Caracteres</p>
+
+    <textarea maxlength="200" name="sobremi" id="sobremi" rows="5" placeholder="Describase en pocas palabras"></textarea>
+
+    <button type="submit" class="btn btn-success">Guardar</button>
+  </form>
+</div>

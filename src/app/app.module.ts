@@ -12,6 +12,12 @@ import { ExperienciasComponent } from './componentes/body/experiencias/experienc
 import { ProyectosComponent } from './componentes/body/proyectos/proyectos.component';
 import { HabilidadesComponent } from './componentes/body/habilidades/habilidades.component';
 import { BodyDatosComponent } from './componentes/body-datos/body-datos.component';
+import { HeaderDatosComponent } from './componentes/header-datos/header-datos.component';
+import { FormPersonaComponent } from './componentes/body-datos/form-persona/form-persona.component';
+import { FormExpComponent } from './componentes/body-datos/form-exp/form-exp.component';
+import { FormEstComponent } from './componentes/body-datos/form-est/form-est.component';
+import { FormHabComponent } from './componentes/body-datos/form-hab/form-hab.component';
+import { FormProComponent } from './componentes/body-datos/form-pro/form-pro.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,13 @@ import { BodyDatosComponent } from './componentes/body-datos/body-datos.componen
     ExperienciasComponent,
     ProyectosComponent,
     HabilidadesComponent,
-    BodyDatosComponent
+    BodyDatosComponent,
+    HeaderDatosComponent,
+    FormPersonaComponent,
+    FormExpComponent,
+    FormEstComponent,
+    FormHabComponent,
+    FormProComponent
   ],
   imports: [
     BrowserModule,
