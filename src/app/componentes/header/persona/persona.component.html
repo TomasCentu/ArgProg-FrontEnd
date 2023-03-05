@@ -1,12 +1,12 @@
 <div class="persona_conteiner">
-  <img src="../../../../assets/banner.jpg" alt="banner" class="banner">
+  <img src={{persona.banner}} alt="banner" class="banner">
 
   <div class="persona_datos">
-    <img src="../../../../assets/fotoPerfil.jpg" alt="foto-perfil" class="persona_foto col-sm-5">
+    <img src={{persona.img}} alt="foto-perfil" class="persona_foto col-sm-5">
 
     <div class="col-sm-7">
-      <p class="persona_nombre">Tomas Fernando Centurión</p>
-      <p class="persona_cargo">Programador Full Stack Developer</p>
+      <p class="persona_nombre">{{persona.nombre}}</p>
+      <p class="persona_cargo">{{persona.cargo}}</p>
     </div>
   </div>
 
@@ -14,7 +14,7 @@
     <h1 class="sobre-mi_titulo">Sobre Mí</h1>
 
     <textarea class="txt-sobre" name="sobre-mi" id="sobreMi" rows="6" readonly placeholder="texto sobre mi">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas mollitia deleniti, recusandae nulla vero reiciendis corporis ullam quos dignissimos maiores dolorem perspiciatis cupiditate obcaecati inci
+      {{persona.sobreMi}}
     </textarea>
   </div>
 </div>

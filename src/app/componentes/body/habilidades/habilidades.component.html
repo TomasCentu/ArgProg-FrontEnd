@@ -4,11 +4,21 @@
     Habilidades
   </h1>
 
-  <ul class="hab_card">
+  <ul class="hab_card" *ngFor="let hab in habilidades">
     <li class="habilidad">
-      <img class="logo_hab" src="../../../../assets/habs/html.svg" alt="img-ilustrativa-habilidad">
+      <img class="logo_hab" src={{hab.foto}} alt="img-ilustrativa-habilidad">
       <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+        <div
+          class="progress-bar"
+          role="progressbar"
+          aria-label="Example with label"
+          style="width: 75%"
+          aria-valuenow=75
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          {{hab.porcentaje}}%
+        </div>
       </div>
     </li>
   </ul>

@@ -1,41 +1,44 @@
 <div class="exp-est_conteiner">
+
+  <!-- EXPERIENCIAS -->
+
   <h1 class="titulo">
     Experiencias
   </h1>
 
-  <ul class="exp-est_card">
-
+  <ul class="exp-est_card" *ngFor="let exp in experiencia">
     <li class="contenedor_card col-lg-6 col-ms-12">
-      <img class="img_card" src="../../../../assets/one.jpg" alt="img-ilustrativa-experiencia">
+      <img class="img_card" src={{exp.foto}} alt="img-ilustrativa-experiencia">
 
       <div class="datos_card">
         <h4 class="titulo_card">
-          Example
+          {{exp.nombre}}
         </h4>
 
         <p class="descripcion_card">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          {{exp.descripcion}}
         </p>
       </div>
     </li>
   </ul>
 
+  <!-- ESTUDIOS -->
+
   <h1 class="titulo">
     Estudios
   </h1>
 
-  <ul class="exp-est_card">
-
+  <ul class="exp-est_card" *ngFor="let est in estudio">
     <li class="contenedor_card col-lg-6 col-ms-12">
-      <img class="img_card" src="../../../../assets/one.jpg" alt="img-ilustrativa-estudios">
+      <img class="img_card" src={{est.foto}} alt="img-ilustrativa-estudios">
 
       <div class="datos_card">
         <h4 class="titulo_card">
-          Example
+          {{est.nombre}}
         </h4>
 
         <p class="descripcion_card">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          {{est.descripcion}}
         </p>
       </div>
     </li>
