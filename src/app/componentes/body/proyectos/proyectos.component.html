@@ -1,0 +1,23 @@
+<div class="proyectos_conteiner">
+  <h1 class="titulo">
+    Proyectos
+  </h1>
+
+  <ul class="proyectos_card">
+    <li class="contenedor_card col-lg-6 col-ms-12" *ngFor="let pro of proyectos">
+      <img class="img_card" src={{pro.foto}} alt="img-ilustrativa-experiencia">
+
+      <div class="datos_card">
+        <h4 class="titulo_card">
+          {{pro.nombre}}
+        </h4>
+
+        <div class="buttons_conteiner">
+          <a class="btn btn-primary" href={{pro.demo}}>DEMO</a>
+          <a class="btn btn-primary" href={{pro.repo}}>Repositorio</a>
+          <button class="btn btn-secondary" type="button" (click)="this.descripcion(pro.descripcion)">Descripción</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

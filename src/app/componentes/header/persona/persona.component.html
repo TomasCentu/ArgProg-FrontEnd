@@ -1,0 +1,20 @@
+<div class="persona_conteiner" *ngIf="persona">
+  <img src={{persona.banner}} alt="banner" class="banner">
+
+  <div class="persona_datos">
+    <img src={{persona.foto}} alt="foto-perfil" class="persona_foto col-sm-5">
+
+    <div class="col-sm-7">
+      <p class="persona_nombre">{{persona.nombre}}</p>
+      <p class="persona_cargo">{{persona.cargo}}</p>
+    </div>
+  </div>
+
+  <div class="persona_sobre-mi">
+    <h1 class="sobre-mi_titulo">Sobre Mí</h1>
+
+    <textarea class="txt-sobre" name="sobre-mi" id="sobreMi" rows="6" readonly placeholder="texto sobre mi">
+      {{persona.sobreMi}}
+    </textarea>
+  </div>
+</div>

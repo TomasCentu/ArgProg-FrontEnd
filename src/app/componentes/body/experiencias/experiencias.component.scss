@@ -1,0 +1,72 @@
+div.exp-est_conteiner {
+
+  & h1.titulo {
+    margin-bottom: 2.5rem;
+  }
+
+  & ul.exp-est_card {
+    display: flex;
+    flex-wrap: wrap;
+
+    & li.contenedor_card {
+      display: flex;
+      margin: 0 0 1rem 0;
+
+      & img.img_card {
+        width: 30%;
+      }
+
+      & div.datos_card {
+        margin-left: 1rem;
+
+        & h4.titulo_card {
+          color: #0b5ed7;
+
+          &::before {
+            content: '~';
+          }
+        }
+
+        & p.descripcion_card {
+          font-size: .9rem;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  div.exp-est_conteiner {
+
+    & h1.titulo {
+      margin-left: .5rem;
+    }
+
+    & ul.exp-est_card {
+
+      & li.contenedor_card {
+
+        & div.datos_card {
+          margin-left: .25rem;
+
+          & p.descripcion_card {
+            font-size: .75rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  div.exp-est_conteiner {
+    & ul.exp-est_card {
+      & li.contenedor_card {
+        & img.img_card {
+          display: none;
+        }
+      }
+    }
+  }
+}

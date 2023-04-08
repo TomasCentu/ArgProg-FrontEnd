@@ -1,0 +1,41 @@
+div.nav_conteiner {
+  padding: .5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & div.nav_imgAP {
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    & img.logoAP {
+      width: 5rem;
+      height: 3rem;
+    }
+
+    & div.textoAP{
+      & p {
+        font-weight: bold;
+        font-size: .5rem;
+        margin: 0 0 0 -1rem;
+        color: #0d6efd;
+      }
+    }
+
+  }
+
+  & ul.nav_redes {
+    display: flex;
+    margin: 0;
+    gap: 1rem;
+    align-items: center;
+
+    & img.nav_redes_logo {
+      width: 2rem;
+      fill: #0d6efd;
+      cursor: pointer;
+    }
+  }
+}

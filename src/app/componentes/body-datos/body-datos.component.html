@@ -1,0 +1,18 @@
+<app-header-datos></app-header-datos>
+
+<div class="editable_conteiner" *ngIf="isLogged">
+  <div class="editable_secciones col-lg-1">
+    <a type="button" class="link_seccion col-12" routerLinkActive="active" (click)="cambioForm(1)">Datos Personales</a>
+    <a type="button" class="link_seccion col-12" routerLinkActive="active" (click)="cambioForm(3)">Experiencias Laborales</a>
+    <a type="button" class="link_seccion col-12" routerLinkActive="active" (click)="cambioForm(2)">Estudios</a>
+    <a type="button" class="link_seccion col-12" routerLinkActive="active" (click)="cambioForm(4)">Hards and Softs skills</a>
+    <a type="button" class="link_seccion col-12" routerLinkActive="active" (click)="cambioForm(5)">Proyectos</a>
+  </div>
+
+  <div id="formularios">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+<app-footer></app-footer>

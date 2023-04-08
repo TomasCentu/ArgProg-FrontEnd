@@ -1,0 +1,28 @@
+<div class="nav_conteiner">
+  <div class="nav_imgAP">
+    <img class="logoAP" src="../../../../assets/APLogo.svg" alt="logo-argentina-programa">
+
+    <div class="textoAP">
+      <p>ARGENTINA</p>
+      <p>PROGRAMA</p>
+    </div>
+  </div>
+
+  <ul class="nav_redes">
+    <li>
+      <a href="">
+        <img class="nav_redes_logo" src="../../../../assets/github.svg" alt="github-logo">
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <img class="nav_redes_logo" src="../../../../assets/linkedin.svg" alt="linkedin-logo">
+      </a>
+    </li>
+    <li>
+      <button class="btn btn-primary" type="button" id="login" (click)="login()" *ngIf="!isLogged">Log In</button>
+      <button class="btn btn-primary" type="button" id="login" (click)="onLogOut()" *ngIf="isLogged">Log Out</button>
+      <button class="btn btn-sussess" type="button" id="login" (click)="form()" *ngIf="isLogged" style="margin-left: .5rem;">Perfil</button>
+    </li>
+  </ul>
+</div>

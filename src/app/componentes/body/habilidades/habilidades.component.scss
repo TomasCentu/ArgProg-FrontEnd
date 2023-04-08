@@ -1,0 +1,39 @@
+div.habilidades-conteiner {
+  & h1.titulo {
+   margin-bottom: 2.5rem;
+  }
+
+  & ul.hab_card {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    & li.habilidad {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: .5rem;
+      border: 1px solid #0d6efd;
+      border-radius: 25px;
+
+      & h2.habilidad_nombre {
+        font-size: 1rem;
+      }
+
+      & div.progress {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  div.habilidades-conteiner {
+    & h1.titulo {
+      margin-left: .5rem;
+    }
+  }
+}

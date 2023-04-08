@@ -1,0 +1,46 @@
+<div class="exp-est_conteiner">
+
+  <!-- EXPERIENCIAS -->
+
+  <h1 class="titulo">
+    Experiencias
+  </h1>
+
+  <ul class="exp-est_card">
+    <li class="contenedor_card col-lg-6 col-ms-12" *ngFor="let exp of experiencia">
+      <img class="img_card img-fluid" src={{exp.foto}} alt="img-ilustrativa-experiencia">
+
+      <div class="datos_card">
+        <h4 class="titulo_card">
+          {{exp.nombre}}
+        </h4>
+
+        <p class="descripcion_card">
+          {{exp.descripcion}}
+        </p>
+      </div>
+    </li>
+  </ul>
+
+  <!-- ESTUDIOS -->
+
+  <h1 class="titulo">
+    Estudios
+  </h1>
+
+  <ul class="exp-est_card">
+    <li class="contenedor_card col-lg-6 col-ms-12" *ngFor="let est of estudio">
+      <img class="img_card" src={{est.foto}} alt="img-ilustrativa-estudios">
+
+      <div class="datos_card">
+        <h4 class="titulo_card">
+          {{est.nombre}}
+        </h4>
+
+        <p class="descripcion_card">
+          {{est.descripcion}}
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>

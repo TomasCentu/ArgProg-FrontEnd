@@ -1,0 +1,36 @@
+div.login_conteiner {
+  width: 100%;
+  height: calc(100vh - 85px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h2.title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: #0d6efd;
+  }
+
+  & p.descripcion {
+    font-size: .9rem;
+    color: #aca9a9;
+    font-style: italic;
+  }
+
+  & form {
+    width: 60%;
+    margin: 1rem auto;
+    text-align: center;
+
+    & div.input_conteiner {
+      width: 60%;
+      margin: 2rem auto;
+    }
+
+    & button.btn {
+      width: 30%;
+      max-width: 200px;
+    }
+  }
+
+}

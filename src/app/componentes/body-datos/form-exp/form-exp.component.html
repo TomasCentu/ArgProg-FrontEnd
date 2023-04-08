@@ -1,0 +1,37 @@
+<div class="editable_datos col-12" *ngIf="isLogged">
+  <form (ngSubmit)="save()" novalidate #f="ngForm">
+    <h4 class="titulo">Datos Laborales</h4>
+
+    <div class="input_conteiner">
+      <input type="text" placeholder="Titulo de Ejemplo" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+      <label for="nombre">Nombre de Empresa</label>
+    </div>
+
+    <div class="input_file">
+      <label for="file">IMG logo</label>
+      <input type="file" name="file" id="file" class="form-control" (change)="uploadImg($event)">
+    </div>
+
+    <textarea name="descripcion" id="descripcion" rows="3" required maxlength="150" placeholder="Descripcion (Max 150 caracteres)" [(ngModel)]="descripcion"></textarea>
+
+    <button type="submit" class="btn btn-success">Agregar</button>
+  </form>
+
+  <ul class="card_list">
+    <li class="card_list__item" *ngFor="let item of lista">
+      <img class="card_list__item-img" [src]="item.foto" alt="img-ilustrativa-experiencia">
+
+      <div class="card_list__item_datos">
+        <h4 class="card_list__item_datos-titulo">
+          {{item.nombre}}
+        </h4>
+
+        <p class="card_list__item_datos-descripcion">
+          {{item.descripcion}}
+        </p>
+      </div>
+
+      <button type="button" class="btn-close" aria-label="Close" (click)="delete(item.id)"></button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,115 @@
+div.editable_datos {
+  width: 80%;
+  margin: 0 auto;
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 500px;
+
+    & h4.titulo {
+      color: #0d6efd;
+      text-decoration: underline;
+      margin-bottom: 2rem;
+      letter-spacing: 2px;
+    }
+
+    & div.input_conteiner {
+      position: relative;
+      width: 100%;
+      margin: 1rem 0;
+
+      & input {
+        width: 100%;
+        margin: 1rem auto;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #0d6efd;
+
+        &::placeholder {
+          visibility: hidden;
+        }
+
+        &:focus + label,
+        &:not(:placeholder-shown) + label {
+          top: -.75rem;
+          left: 0;
+          font-size: .8rem;
+          color: #000;
+          font-weight: bold;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      & label {
+        position: absolute;
+        transition: .3s;
+        top: 15%;
+        left: .25rem;
+        color: #999;
+      }
+    }
+
+    & span{
+      font-weight: bold;
+    }
+
+    & p.alerta {
+      color: #DD0000;
+      font-size: .75rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    & button.btn-success {
+      display: block;
+      margin: 1rem auto;
+      width: 30%;
+    }
+
+    & div.input_file_conteiner {
+      width: 100%;
+      margin: 1rem 0;
+      display: flex;
+
+      & div.input {
+        width: 80%;
+
+        & label[for="file"] {
+          font-size: .8rem;
+          color: #000;
+          font-weight: bold;
+        }
+      }
+
+      & img {
+        width: calc(20% - .25rem);
+        height: 60px;
+        margin-right: .25rem;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  div.editable_datos {
+    & form {
+      & div.input_file_conteiner {
+        & img {
+          display: none;
+        }
+
+        & div.input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

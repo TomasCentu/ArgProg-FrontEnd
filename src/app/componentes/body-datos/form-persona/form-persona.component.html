@@ -1,0 +1,48 @@
+<div class="editable_datos col-12" *ngIf="isLogged">
+
+  <form novalidate #f="ngForm" class="col-12">
+    <h4 class="titulo">Datos Personales</h4>
+
+    <div class="input_conteiner">
+      <input type="text" placeholder="nombre" id="nombre" name="nombre" [(ngModel)]="per.nombre">
+      <label for="nombre">Nombre Completo</label>
+    </div>
+
+    <div class="input_conteiner">
+      <input type="text" placeholder="cargoP" id="cargo" name="cargo" [(ngModel)]="per.cargo">
+      <label for="cargo">Cargo / Puesto</label>
+    </div>
+
+    <div class="input_file_conteiner">
+      <img [src]="per.foto" alt="foto_de_perfil">
+
+      <div class="input">
+        <label for="fileImg">Foto Perfil</label>
+        <input type="file" name="fileImg" id="fileImg" class="form-control" (change)="uploadImg($event)">
+      </div>
+    </div>
+
+    <div class="input_file_conteiner">
+      <img [src]="per.banner" alt="foto_de_banner">
+
+      <div class="input">
+        <label for="fileBanner">Foto Banner</label>
+        <input type="file" name="fileBanner" id="fileBanner" class="form-control" (change)="uploadBanner($event)">
+      </div>
+    </div>
+
+    <label for="sobreMi" class="col-12">Descripción "Sobre Mí"</label>
+
+    <p class="alerta">Maximo 200 Caracteres</p>
+
+    <textarea
+      maxlength="200" name="sobreMi" id="sobreMi"
+      [maxLength]="200" rows="5"
+      placeholder="Describase en pocas palabras"
+      [(ngModel)]="per.sobreMi"
+    ></textarea>
+
+    <button type="submit" class="btn btn-success" *ngIf="!existe" (click)="save()">Guardar</button>
+    <button type="submit" class="btn btn-success" *ngIf="existe" (click)="edit()">Editar</button>
+  </form>
+</div>

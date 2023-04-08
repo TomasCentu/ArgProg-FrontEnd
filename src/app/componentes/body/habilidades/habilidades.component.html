@@ -1,0 +1,26 @@
+<div class="habilidades-conteiner">
+
+  <h1 class="titulo">
+    Habilidades
+  </h1>
+
+  <ul class="hab_card">
+    <li class="habilidad" *ngFor="let hab of habilidades">
+      <h2 class="habilidad_nombre">{{hab.nombre}}</h2>
+
+      <div class="progress">
+        <div
+          class = "progress-bar"
+          role = "progressbar"
+          aria-label = "Example with label"
+          [style.width.%] = "hab.porcentaje"
+          attr.aria-valuenow = "{{hab.porcentaje}}"
+          aria-valuemin ="0"
+          aria-valuemax ="100"
+        >
+          {{hab.porcentaje}}%
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

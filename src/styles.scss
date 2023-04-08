@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none !important;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+}
+
+// tarjetas de forms
+ul.card_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  & li.card_list__item {
+    display: flex;
+    margin: 0 0 1rem 0;
+    position: relative;
+
+    & img.card_list__item-img {
+      width: 30%;
+    }
+
+    & div.card_list__item_datos {
+      margin-left: 1rem;
+
+      & h4.card_list__item_datos-titulo {
+        color: #0b5ed7;
+
+        &::before {
+          content: '~';
+        }
+      }
+
+      & p.card_list__item_datos-descripcion {
+        font-size: .9rem;
+        font-style: italic;
+      }
+    }
+
+    & button.btn-close {
+      position: absolute;
+      right: 1rem;
+      top: 5%;
+      padding: .35rem;
+      background-color: red;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  ul.card_list {
+    & li.card_list__item {
+      & div.card_list__item_datos {
+        & h4.card_list__item_datos-titulo {
+          font-size: 1rem;
+        }
+        & p.card_list__item_datos-descripcion {
+          font-size: .75rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  ul.card_list {
+    & li.card_list__item {
+      & div.card_list__item_datos {
+        & h4.card_list__item_datos-titulo {
+          font-size: .9rem;
+        }
+        & p.card_list__item_datos-descripcion {
+          font-size: .65rem;
+        }
+      }
+
+      & button.btn-close {
+        right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  ul.card_list {
+    padding: 0;
+    & li.card_list__item {
+      & img.card_list__item-img {
+        display: none;
+      }
+      & div.card_list__item_datos {
+        margin: 0;
+        padding: 0;
+        & h4.card_list__item_datos-titulo {
+          font-size: .9rem;
+        }
+        & p.card_list__item_datos-descripcion {
+          font-size: .7rem;
+        }
+      }
+
+      & button.btn-close {
+        right: 0;
+      }
+    }
+  }
+}
+
+// inputs de formularios
+form {
+  width: 80%;
+  max-width: 500px;
+  margin: 0 1rem 0 4rem;
+
+  & div.input_conteiner {
+  position: relative;
+  width: 100%;
+
+    & input {
+      width: 100%;
+      margin: .5rem 0;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #0d6efd;
+      color: #0b5ed7;
+
+      &::placeholder {
+        visibility: hidden;
+      }
+
+      &:focus + label,
+      &:not(:placeholder-shown) + label {
+        top: -.9rem;
+        left: 0;
+        font-size: .8rem;
+        color: #000;
+        font-weight: bold;
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    & label {
+      position: absolute;
+      transition: .3s;
+      top: 15%;
+      left: .25rem;
+      color: #999;
+    }
+  }
+
+  & textarea {
+    width: 80%;
+    height: 125px;
+    padding: .5rem;
+    border-radius: 15px;
+    border: 1px solid #0d6efd;
+    outline: none;
+    resize: none !important;
+    color: #0b5ed7;
+  }
+
+  div.input_file {
+    width: 100%;
+
+    & label[for="file"] {
+      font-size: .8rem;
+      color: #000;
+      font-weight: bold;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  form {
+    & textarea {
+      width: 100%;
+    }
+  }
+}

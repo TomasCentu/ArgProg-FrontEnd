@@ -1,0 +1,17 @@
+div.footer {
+  & div.mensaje_conteiner {
+    background-color: #0d6efd;
+    text-align: center;
+
+    & p.msg {
+      font-size: .9rem;
+      color: #FFF;
+      margin: 0;
+
+      & a {
+        text-decoration: none;
+        color: #FFF;
+      }
+    }
+  }
+}

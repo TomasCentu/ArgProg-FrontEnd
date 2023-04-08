@@ -1,0 +1,38 @@
+<div class="editable_datos" *ngIf="isLogged">
+  <form (ngSubmit)="save()" novalidate #f="ngForm">
+    <h4 class="titulo">Datos Habilidades Soft / Hard</h4>
+
+    <div class="input_conteiner">
+      <input type="text" placeholder="Titulo de Ejemplo" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+      <label for="nombre">Nombre de Habilidad</label>
+    </div>
+
+    <input type="range" name="porcentaje" id="porcentaje" [(ngModel)]="porcentaje" required> {{porcentaje}}%
+
+    <button type="submit" class="btn btn-success">Agregar</button>
+  </form>
+
+  <div class="lista">
+    <ul class="hab_card">
+      <li class="habilidad" *ngFor="let hab of lista">
+        <h2 class="habilidad_nombre">{{hab.nombre}}</h2>
+  
+        <div class="progress">
+          <div
+            class = "progress-bar"
+            role = "progressbar"
+            aria-label = "Example with label"
+            [style.width.%] = "hab.porcentaje"
+            attr.aria-valuenow = {{hab.porcentaje}}
+            aria-valuemin ="0"
+            aria-valuemax ="100"
+          >
+            {{hab.porcentaje}}%
+          </div>
+        </div>
+  
+        <button type="button" class="btn-close" aria-label="Close"  (click)="delete(hab.id)"></button>
+      </li>
+    </ul>
+  </div>
+</div>

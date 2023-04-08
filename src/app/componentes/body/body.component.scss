@@ -1,0 +1,10 @@
+div.conteiner {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+  div.conteiner {
+    width: 100%;
+  }
+}

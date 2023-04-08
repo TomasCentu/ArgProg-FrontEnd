@@ -1,0 +1,59 @@
+div.proyectos_conteiner {
+  & h1.titulo {
+    margin-bottom: 2.5rem;
+  }
+
+  & ul.proyectos_card {
+    display: flex;
+    flex-wrap: wrap;
+
+    & li.contenedor_card {
+      display: flex;
+      margin: 0 0 1rem 0;
+
+      img.img_card {
+        width: 40%;
+      }
+
+      & div.datos_card {
+        margin-left: .5rem;
+
+        & h4.titulo_card {
+          color: #0b5ed7;
+        }
+
+        & div.buttons_conteiner {
+          display: flex;
+          margin-top: 1rem;
+          gap: .5rem;
+
+          & button.btn, a.btn {
+            font-size: .75rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  div.proyectos_conteiner {
+    & h1.titulo {
+      margin-left: .5rem;
+    }
+
+    & ul.proyectos_card {
+
+      & li.contenedor_card {
+
+        img.img_card {
+          display: none;
+        }
+
+        & div.datos_card {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

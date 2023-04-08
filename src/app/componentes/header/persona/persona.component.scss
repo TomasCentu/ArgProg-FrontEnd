@@ -1,0 +1,128 @@
+div.persona_conteiner {
+  & img.banner {
+    width: 100%;
+    height: 55vh;
+    background-position: center;
+    background-size: cover;
+  }
+
+  & div.persona_datos {
+    display: flex;
+
+    & img.persona_foto {
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+      border: 5px solid #fff;
+      margin: -5rem 0 0 2rem;
+    }
+
+    & div {
+      & p.persona_nombre {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin: 0 0 0 1rem;
+      }
+
+      & p.persona_cargo {
+        font-size: 1rem;
+        margin: 0 0 0 2.5rem;
+        color: #0b5ed7;
+
+        &::before {
+          content: '~';
+          color: #0b5ed7;
+          margin-right: .25rem;
+        }
+      }
+    }
+  }
+
+  & div.persona_sobre-mi {
+    text-align: center;
+    width: 80%;
+    margin: 2rem auto 0 auto;
+
+    & h1.sobre-mi_titulo {
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+
+    & textarea.txt-sobre {
+      width: 80%;
+      border: none;
+      outline: none;
+      resize: none;
+      color: #0b5ed7;
+    }
+  }
+}
+
+@media (min-width: 270px) and (max-width: 500px) {
+  div.persona_conteiner {
+    & img.banner {
+      height: 30vh;
+    }
+
+    & div.persona_datos {
+      & img.persona_foto {
+        width: 100px;
+        height: 100px;
+        margin: -3rem 0 0 .5rem;
+      }
+
+      & div {
+        & p.persona_nombre {
+          font-size: .75rem;
+          margin: 0 0 0 .5rem;
+        }
+
+        & p.persona_cargo {
+          font-size: .6rem;
+          margin: 0 0 0 1.5rem;
+        }
+      }
+    }
+
+    & div.persona_sobre-mi {
+      width: 100%;
+
+      & h1.sobre-mi_titulo {
+        margin-left: .5rem;
+      }
+
+      & textarea.txt-sobre {
+        font-size: .80rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  div.persona_conteiner {
+    & img.banner {
+      height: 60vh;
+    }
+
+    & div.persona_datos {
+
+      & img.persona_foto {
+        width: 180px;
+        height: 180px;
+      }
+
+      & div {
+        & p.persona_nombre {
+          font-size: 1.5rem;
+          margin: 0 0 0 1.5rem;
+        }
+
+        & p.persona_cargo {
+          font-size: 1.25rem;
+          margin: 0 0 0 3rem;
+        }
+      }
+    }
+  }
+
+}
