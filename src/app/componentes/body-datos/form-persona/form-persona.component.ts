@@ -21,7 +21,11 @@ export class FormPersonaComponent implements OnInit {
   ngOnInit(): void {
     this.serv.exist(1).subscribe(data => this.existe = data);
 
-    this.cargar();
+    if (this.existe) {
+      this.cargar();
+    } else {
+      this.per = new Persona();
+    }
 
     if (this.token.getToken()) {
       this.isLogged = true;

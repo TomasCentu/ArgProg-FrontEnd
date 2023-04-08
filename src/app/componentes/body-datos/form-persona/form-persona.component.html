@@ -14,7 +14,7 @@
     </div>
 
     <div class="input_file_conteiner">
-      <img [src]="per.foto" alt="foto_de_perfil">
+      <img *ngIf="existe" [src]="per.foto" alt="foto_de_perfil">
 
       <div class="input">
         <label for="fileImg">Foto Perfil</label>
@@ -23,7 +23,7 @@
     </div>
 
     <div class="input_file_conteiner">
-      <img [src]="per.banner" alt="foto_de_banner">
+      <img *ngIf="existe" [src]="per.banner" alt="foto_de_banner">
 
       <div class="input">
         <label for="fileBanner">Foto Banner</label>
