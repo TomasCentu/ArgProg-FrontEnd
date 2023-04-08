@@ -166,7 +166,7 @@ form {
   div.input_file {
     width: 100%;
 
-    & label[for="file"] {
+    & label[for="file"], label[for="fileImg"], label[for="fileBanner"] {
       font-size: .8rem;
       color: #000;
       font-weight: bold;
