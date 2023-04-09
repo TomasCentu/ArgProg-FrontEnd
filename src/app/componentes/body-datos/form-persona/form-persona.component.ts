@@ -84,6 +84,8 @@ export class FormPersonaComponent implements OnInit {
     this.serv.getPersona(1).subscribe(data => {
       if (data.nombre != null) {
         this.per = data;
+      } else {
+        this.per = new Persona("","","","","","","","");
       }
     });
   }
