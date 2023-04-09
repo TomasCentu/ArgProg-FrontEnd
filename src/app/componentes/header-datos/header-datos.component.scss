@@ -4,8 +4,7 @@ div.nav_conteiner {
   justify-content: space-between;
   align-items: center;
 
-  & div.nav_imgAP {
-
+  & a.nav_imgAP {
     display: flex;
     align-items: center;
     cursor: pointer;

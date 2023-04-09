@@ -7,6 +7,8 @@ div.habilidades-conteiner {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    width: 70%;
+    margin: 0 auto;
 
     & li.habilidad {
       width: 100px;

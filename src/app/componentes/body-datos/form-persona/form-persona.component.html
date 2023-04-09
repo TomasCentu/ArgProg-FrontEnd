@@ -9,8 +9,18 @@
     </div>
 
     <div class="input_conteiner">
-      <input type="text" placeholder="cargoP" id="cargo" name="cargo" [(ngModel)]="per.cargo">
+      <input type="text" placeholder="cargo" id="cargo" name="cargo" [(ngModel)]="per.cargo">
       <label for="cargo">Cargo / Puesto</label>
+    </div>
+
+    <div class="input_conteiner">
+      <input type="text" placeholder="github" id="github" name="github" [(ngModel)]="per.github">
+      <label for="github">URL Github</label>
+    </div>
+
+    <div class="input_conteiner">
+      <input type="text" placeholder="linkedin" id="linkedin" name="linkedin" [(ngModel)]="per.linkedin">
+      <label for="linkedin">URL Linkedin</label>
     </div>
 
     <div class="input_file">
@@ -18,7 +28,7 @@
 
       <div class="input">
         <label for="fileImg">Foto Perfil</label>
-        <input type="file" name="fileImg" id="fileImg" class="form-control" (change)="uploadImg($event)">
+        <input type="file" name="fileImg" id="fileImg" class="form-control" (change)="uploadImg($event)" accept=".png .jpg .jpeg .svg">
       </div>
     </div>
 
@@ -27,8 +37,13 @@
 
       <div class="input">
         <label for="fileBanner">Foto Banner</label>
-        <input type="file" name="fileBanner" id="fileBanner" class="form-control" (change)="uploadBanner($event)">
+        <input type="file" name="fileBanner" id="fileBanner" class="form-control" (change)="uploadBanner($event)"  accept=".png .jpg .jpeg .svg">
       </div>
+    </div>
+
+    <div class="input">
+      <label for="fileCv">Cv</label>
+      <input type="file" name="fileCv" id="fileCv" class="form-control" (change)="uploadCv($event)" accept=".pdf">
     </div>
 
     <label for="sobreMi" class="col-12">Descripción "Sobre Mí"</label>

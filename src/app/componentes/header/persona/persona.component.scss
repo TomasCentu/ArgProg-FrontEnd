@@ -48,12 +48,10 @@ div.persona_conteiner {
       margin-bottom: 1rem;
     }
 
-    & textarea.txt-sobre {
+    & p.sobre-mi_descripcion {
       width: 80%;
-      border: none;
-      outline: none;
-      resize: none;
-      color: #0b5ed7;
+      color: #0b5ed7;    
+      margin: 0 auto 1rem;
     }
   }
 }
@@ -91,7 +89,7 @@ div.persona_conteiner {
         margin-left: .5rem;
       }
 
-      & textarea.txt-sobre {
+      & p.sobre-mi_descripcion {
         font-size: .80rem;
       }
     }

@@ -12,11 +12,7 @@ export class AuthService {
 
   authURL = 'https://tomascentu-portfolio.up.railway.app/auth/';
 
-  constructor(private http :HttpClient) { }
-
-  public new(user :NuevoUsuario) :Observable<any> {
-    return this.http.post<any>(this.authURL + 'new', user);
-  }
+  constructor(private http :HttpClient) {}
 
   public login(login :NuevoUsuario) :Observable<jwtDto> {
     return this.http.post<jwtDto>(this.authURL + 'login', login);

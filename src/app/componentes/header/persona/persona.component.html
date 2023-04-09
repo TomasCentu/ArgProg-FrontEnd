@@ -13,8 +13,10 @@
   <div class="persona_sobre-mi">
     <h1 class="sobre-mi_titulo">Sobre Mí</h1>
 
-    <textarea class="txt-sobre" name="sobre-mi" id="sobreMi" rows="6" readonly placeholder="texto sobre mi">
+    <p class="sobre-mi_descripcion">
       {{persona.sobreMi}}
-    </textarea>
+    </p>
+
+    <a href="{{persona.cv}}" target="_blank" class="btn btn-primary">Mi CV</a>
   </div>
 </div>

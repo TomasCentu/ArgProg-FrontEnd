@@ -9,7 +9,7 @@
 
     <div class="input_file">
       <label for="file">IMG logo</label>
-      <input type="file" name="file" id="file" class="form-control" (change)="uploadImg($event)">
+      <input type="file" name="file" id="file" class="form-control" (change)="uploadImg($event)" accept=".png .jpg .jpeg .svg">
     </div>
 
     <textarea name="descripcion" id="descripcion" rows="3" required maxlength="150" placeholder="Descripcion (Max 150 caracteres)" [(ngModel)]="descripcion"></textarea>

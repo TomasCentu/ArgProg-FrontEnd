@@ -20,12 +20,7 @@ export class FormPersonaComponent implements OnInit {
 
   ngOnInit(): void {
     this.serv.exist(1).subscribe(data => this.existe = data);
-
-    if (this.existe) {
-      this.cargar();
-    } else {
-      this.per = new Persona();
-    }
+    this.cargar();
 
     if (this.token.getToken()) {
       this.isLogged = true;
@@ -40,7 +35,8 @@ export class FormPersonaComponent implements OnInit {
   isLogged: boolean = false;
 
   save(): void {
-    let persona = new Persona(this.per.nombre, this.per.cargo, this.imgS.perfil, this.per.sobreMi, this.imgS.banner);
+    let persona = new Persona(this.per.nombre, this.per.cargo, this.imgS.perfil, this.per.sobreMi,
+      this.imgS.banner, this.per.linkedin, this.per.github, this.per.cv);
 
     this.serv.save(persona).subscribe(() => {
       try {
@@ -54,7 +50,8 @@ export class FormPersonaComponent implements OnInit {
 
   edit(): void {
 
-    let persona = new Persona(this.per.nombre, this.per.cargo, this.imgS.perfil, this.per.sobreMi, this.imgS.banner);
+    let persona = new Persona(this.per.nombre, this.per.cargo, this.imgS.perfil, this.per.sobreMi,
+      this.imgS.banner, this.per.linkedin, this.per.github, this.per.cv);
     persona.id = 1;
 
     this.serv.edit(persona).subscribe(() => {
@@ -78,9 +75,16 @@ export class FormPersonaComponent implements OnInit {
     this.imgS.uploadImage($event, NAME);
   }
 
+  uploadCv($event: any) {
+    const NAME = "mycv";
+    this.imgS.uploadCv($event, NAME);
+  }
+
   cargar() {
     this.serv.getPersona(1).subscribe(data => {
-      this.per = data;
+      if (data.nombre != null) {
+        this.per = data;
+      }
     });
   }
 }

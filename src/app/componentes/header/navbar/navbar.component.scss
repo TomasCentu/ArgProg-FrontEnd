@@ -4,7 +4,7 @@ div.nav_conteiner {
   justify-content: space-between;
   align-items: center;
 
-  & div.nav_imgAP {
+  & a.nav_imgAP {
 
     display: flex;
     align-items: center;
@@ -46,7 +46,7 @@ div.nav_conteiner {
   div.nav_conteiner {
     padding: .25rem;
 
-    & div.nav_imgAP {
+    & a.nav_imgAP {
 
       & img.logoAP {
         width: 3rem;
