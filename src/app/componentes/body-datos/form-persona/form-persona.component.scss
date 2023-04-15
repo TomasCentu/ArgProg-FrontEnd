@@ -1,4 +1,4 @@
-div.editable_datos {
+div.persona {
   width: 80%;
   margin: 0 auto;
 
@@ -27,6 +27,7 @@ div.editable_datos {
         outline: none;
         border: none;
         border-bottom: 1px solid #0d6efd;
+        color: #0d6efd;
 
         &::placeholder {
           visibility: hidden;
@@ -55,10 +56,6 @@ div.editable_datos {
       }
     }
 
-    & span{
-      font-weight: bold;
-    }
-
     & p.alerta {
       color: #DD0000;
       font-size: .75rem;
@@ -72,7 +69,7 @@ div.editable_datos {
       width: 30%;
     }
 
-    & div.input_file{
+    & div.input_file {
       width: 100%;
       margin: 1rem 0;
       display: flex;
@@ -80,7 +77,7 @@ div.editable_datos {
       & div.input {
         width: 80%;
 
-        & label[for="fileImg"], label[for="fileBanner"]  {
+        & label[for="fileImg"], label[for="fileBanner"] {
           font-size: .8rem;
           color: #000;
           font-weight: bold;
@@ -92,6 +89,34 @@ div.editable_datos {
         height: 60px;
         margin-right: .25rem;
       }
+    }
+
+    & div.input_cv {
+      width: 100%;
+      margin: 1rem 0;
+
+      & label[for="fileCv"] {
+        font-size: .8rem;
+        color: #000;
+        font-weight: bold;
+      }
+    }
+
+    & label[for="sobreMi"] {
+      font-size: .8rem;
+      color: #000;
+      font-weight: bold;
+    }
+
+    & textarea {
+      width: 80%;
+      height: 125px;
+      padding: .5rem;
+      border-radius: 15px;
+      border: 1px solid #0d6efd;
+      outline: none;
+      resize: none !important;
+      color: #0b5ed7;
     }
   }
 }
@@ -109,6 +134,9 @@ div.editable_datos {
         & div.input {
           width: 100%;
         }
+      }
+      & textarea {
+        width: 100%;
       }
     }
   }

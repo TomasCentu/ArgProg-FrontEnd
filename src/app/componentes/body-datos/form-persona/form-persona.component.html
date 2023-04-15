@@ -1,4 +1,4 @@
-<div class="editable_datos col-12" *ngIf="isLogged">
+<div class="persona col-12" *ngIf="isLogged">
 
   <form novalidate #f="ngForm" class="col-12">
     <h4 class="titulo">Datos Personales</h4>
@@ -41,7 +41,7 @@
       </div>
     </div>
 
-    <div class="input">
+    <div class="input_cv">
       <label for="fileCv">Cv</label>
       <input type="file" name="fileCv" id="fileCv" class="form-control" (change)="uploadCv($event)" accept=".pdf">
     </div>

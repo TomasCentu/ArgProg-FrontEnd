@@ -24,13 +24,48 @@ div.login_conteiner {
 
     & div.input_conteiner {
       width: 60%;
+      max-width: 350px;
       margin: 2rem auto;
+      position: relative;
+
+      & input {
+        width: 100%;
+        margin: 1rem auto;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #0d6efd;
+
+        &::placeholder {
+          visibility: hidden;
+        }
+
+        &:focus+label,
+        &:not(:placeholder-shown)+label {
+          top: -.75rem;
+          left: 0;
+          font-size: .8rem;
+          color: #000;
+          font-weight: bold;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      & label {
+        position: absolute;
+        transition: .3s;
+        top: 15%;
+        left: .25rem;
+        color: #999;
+      }
+
+      & button.btn {
+        width: 30%;
+        max-width: 200px;
+      }
     }
 
-    & button.btn {
-      width: 30%;
-      max-width: 200px;
-    }
   }
-
 }

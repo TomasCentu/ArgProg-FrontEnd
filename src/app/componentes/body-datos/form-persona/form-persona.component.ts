@@ -36,7 +36,7 @@ export class FormPersonaComponent implements OnInit {
 
   save(): void {
     let persona = new Persona(this.per.nombre, this.per.cargo, this.imgS.perfil, this.per.sobreMi,
-      this.imgS.banner, this.per.linkedin, this.per.github, this.per.cv);
+      this.imgS.banner, this.per.linkedin, this.per.github, this.imgS.cv);
 
     this.serv.save(persona).subscribe(() => {
       try {
@@ -51,7 +51,7 @@ export class FormPersonaComponent implements OnInit {
   edit(): void {
 
     let persona = new Persona(this.per.nombre, this.per.cargo, this.imgS.perfil, this.per.sobreMi,
-      this.imgS.banner, this.per.linkedin, this.per.github, this.per.cv);
+      this.imgS.banner, this.per.linkedin, this.per.github, this.imgS.cv);
     persona.id = 1;
 
     this.serv.edit(persona).subscribe(() => {

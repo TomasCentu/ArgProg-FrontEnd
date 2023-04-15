@@ -1,5 +1,5 @@
 <div class="editable_datos" *ngIf="isLogged">
-  <form (ngSubmit)="save()" novalidate #f="ngForm">
+  <form (ngSubmit)="save()" novalidate #f="ngForm" class="col-lg-4">
     <h4 class="titulo">Datos Habilidades Soft / Hard</h4>
 
     <div class="input_conteiner">
@@ -12,11 +12,11 @@
     <button type="submit" class="btn btn-success">Agregar</button>
   </form>
 
-  <div class="lista">
+  <div class="lista col-lg-8">
     <ul class="hab_card">
       <li class="habilidad" *ngFor="let hab of lista">
         <h2 class="habilidad_nombre">{{hab.nombre}}</h2>
-  
+
         <div class="progress">
           <div
             class = "progress-bar"
@@ -30,7 +30,7 @@
             {{hab.porcentaje}}%
           </div>
         </div>
-  
+
         <button type="button" class="btn-close" aria-label="Close"  (click)="delete(hab.id)"></button>
       </li>
     </ul>
