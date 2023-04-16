@@ -1,11 +1,16 @@
 div.proyectos_conteiner {
   & h1.titulo {
     margin-bottom: 2.5rem;
+    letter-spacing: 5px;
+    color: #0b5ed7;
   }
 
   & ul.proyectos_card {
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
 
     & li.contenedor_card {
       display: flex;
@@ -66,6 +71,13 @@ div.proyectos_conteiner {
 
         & div.datos_card {
           margin: 0;
+
+          & div.buttons_conteiner {
+
+            & button.btn, a.btn {
+              font-size: .65rem;
+            }
+          }
         }
       }
     }

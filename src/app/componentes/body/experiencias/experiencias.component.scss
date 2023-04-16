@@ -2,18 +2,19 @@ div.exp-est_conteiner {
 
   & h1.titulo {
     margin-bottom: 2.5rem;
+    letter-spacing: 5px;
+    color: #0b5ed7;
   }
 
   & ul.exp-est_card {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
     padding: 0;
+    margin : 2rem 0;
+    gap: 1.5rem 0;
 
     & li.contenedor_card {
       display: flex;
       height: 120px;
-      min-width: 450px;
+      min-width: 425px;
       padding: .25rem;
       border: 1px solid #dad5d5;
       border-radius: 15px;
@@ -29,6 +30,7 @@ div.exp-est_conteiner {
 
         & h4.titulo_card {
           color: #0b5ed7;
+          font-size: 1.25rem;
 
           &::before {
             content: '~';
@@ -49,6 +51,8 @@ div.exp-est_conteiner {
     & ul.exp-est_card {
       & li.contenedor_card {
         width: 100%;
+        margin: 0 auto;
+        min-width: 0px;
       }
     }
   }

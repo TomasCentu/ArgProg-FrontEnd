@@ -40,7 +40,6 @@ export class FormPersonaComponent implements OnInit {
 
     this.serv.save(persona).subscribe(() => {
       try {
-        alert("Guardado con exito");
         this.cargar()
       } catch (error) {
         console.log(error);
@@ -56,8 +55,6 @@ export class FormPersonaComponent implements OnInit {
 
     this.serv.edit(persona).subscribe(() => {
       try {
-        alert("Editado con exito");
-        console.log(persona)
         this.cargar()
       } catch (error) {
         console.log(error);

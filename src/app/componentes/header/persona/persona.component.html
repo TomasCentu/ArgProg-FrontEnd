@@ -1,4 +1,4 @@
-<div class="persona_conteiner" *ngIf="persona">
+<div class="persona_conteiner" *ngIf="existe">
   <img src={{persona.banner}} alt="banner" class="banner">
 
   <div class="persona_datos">
@@ -17,6 +17,6 @@
       {{persona.sobreMi}}
     </p>
 
-    <a href="{{persona.cv}}" target="_blank" class="btn btn-primary">Mi CV</a>
+    <a *ngIf="existe" href="{{persona.cv}}" target="_blank" class="btn btn-primary">Mi CV</a>
   </div>
 </div>

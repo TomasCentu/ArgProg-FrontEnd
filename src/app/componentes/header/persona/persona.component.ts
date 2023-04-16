@@ -16,7 +16,11 @@ export class PersonaComponent implements OnInit {
 
   persona: Persona = new Persona();
 
+  existe = false;
+
   ngOnInit(): void {
+    this.personaServ.exist(1).subscribe(data => this.existe = data);
+
     this.personaServ.getPersona(1).subscribe(data => {
       this.persona = data;
     });

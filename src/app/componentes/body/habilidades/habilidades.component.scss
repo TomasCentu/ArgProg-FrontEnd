@@ -1,14 +1,16 @@
 div.habilidades-conteiner {
   & h1.titulo {
    margin-bottom: 2.5rem;
+   letter-spacing: 5px;
+   color: #0b5ed7;
   }
 
   & ul.hab_card {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    width: 70%;
-    margin: 0 auto;
+    width: 90%;
+    margin: 2rem auto;
 
     & li.habilidad {
       width: 100px;

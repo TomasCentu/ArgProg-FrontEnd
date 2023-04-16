@@ -37,7 +37,6 @@ export class FormHabComponent  implements OnInit {
 
     this.serv.save(item).subscribe(() => {
      try {
-       alert('guardada');
        this.cargarDatos();
      } catch (error) {
       console.log(error);
@@ -48,7 +47,6 @@ export class FormHabComponent  implements OnInit {
   delete(id :any) :void {
     this.serv.delete(id).subscribe(() => {
       try {
-        alert('borrada');
         this.cargarDatos();
       } catch (error) {
        console.log(error);

@@ -42,7 +42,6 @@ export class FormEstComponent implements OnInit {
 
     this.serv.save(estudio).subscribe(() => {
      try {
-       alert('guardada');
        this.cargarDatos();
      } catch (error) {
       console.log(error);
@@ -53,7 +52,6 @@ export class FormEstComponent implements OnInit {
   delete(id :any) :void {
     this.serv.delete(id).subscribe(() => {
       try {
-        alert('borrada');
         this.cargarDatos();
       } catch (error) {
        console.log(error);
